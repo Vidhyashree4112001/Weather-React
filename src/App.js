@@ -18,7 +18,7 @@ function App() {
 
     function getData()
     {
-        var weather = axios("https://api.openweathermap.org/data/2.5/weather?q= ${ enteredvalue }&appid=ee949cc184264765ad2f53c854eb1a81")
+        var weather = axios(`https://api.openweathermap.org/data/2.5/weather?q=${enteredvalue}&appid=ee949cc184264765ad2f53c854eb1a81`)
 
         weather.then(function(dalta){
             setdeg(dalta.data.main.temp)
@@ -39,7 +39,7 @@ function App() {
 
                 <button onClick={getData} className="bg-black text-white rounded-lg p-1 text-xs mt-2">Get Report ⚡</button>
 
-                <p className="text-xs mt-2">Degree: {deg} | City: {city} | Weather: {desc}</p>
+                <p className="text-xs mt-2">Degree:{deg} | City:{city} | Weather:{desc}</p>
             </div>
 
         </div>)
